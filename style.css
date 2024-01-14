@@ -69,7 +69,7 @@ header, .first-section, .third-section, .contact{
     justify-content: center;
 }
 
-.first-section, .galeria article, footer{
+.first-section, .galeria article, .third-section p, footer{
     text-align: center;
 }
 
@@ -84,19 +84,15 @@ header, .first-section, .contact{
 /*HEADER-------------------------------------------------------------------------------------*/
 header{
     background-position: bottom;
-    height: 15em;
+    min-height: 15em;
     font-size: xx-large;
 }
 
 /*FIRST SECTION----------------------------------------------------------------------------------*/
 .first-section{
-    height: 45em;
+    min-height: 45em;
     background-color: var(--lightgray);
-    padding: 10em;
-}
-
-.header-section{
-    padding: 2em;
+    padding: 5em;
 }
 
 .header-section h2, .posts img, .posts figcaption, .posts p{
@@ -107,7 +103,6 @@ header{
     margin-bottom: 5em;
 }
 
-
 .posts div{
     padding: 5em;
 }
@@ -117,21 +112,21 @@ header{
 }
 
 .first-section img{
-    width: 50px;
-    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .green-bottom{
     border: 1px solid var(--green-font);
     border-radius: 3px;
-    padding: 1em;
+    padding: 0.5em;
     background-color: var(--green-font);
 }
 
 /*GALERIA---------------------------------------------------------------------------------*/
 .galeria{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
     grid-gap: 3em;
     padding: 6em;
 }
@@ -149,7 +144,7 @@ header{
 
 /*THIRST-SECTION---------------------------------------------------------------------*/
 .third-section{
-    height: 10em;
+    min-height: 10em;
     background-position: center;
     font-style: italic;
     font-size: x-large;
@@ -172,10 +167,40 @@ header{
 
 .contact p{
     margin-top: 1em;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
 }
 
-.redes i{
-    margin-right: 1em;
-    margin-bottom: 2em;
+.contact hr{
+    min-width: 75%;
+    border-color: var(--dark-grey);
 }
+
+/*MEDIA QUERIES---------------------------------------------------------------*/
+/*DESKTOP---------------------------------------------------------------------*/
+@media screen and (max-width: 1300px) {
+    .posts {
+      flex-direction: column;
+    }
+
+    .posts div{
+        padding: 2em;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));  
+    }
+
+    .third-section{
+        padding-right: 5em;
+        padding-left: 5em;
+    }
+    
+    footer{
+        height: 10em;
+    }
+    
+    footer p{
+        margin-bottom: 2em;
+    }
+  }
+  
