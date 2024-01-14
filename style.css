@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+ul, ol {
+    list-style: none;
+}
+    
+a {
+    text-decoration: none;
+}
+    
+*:focus {
+    outline: none; /* Desactivar el contorno por defecto en todos los elementos formulario*/
+}
+    
+body { 
+    font-size: 1rem;
+    font-family: system-ui;/* permite que el navegador elija la fuente predeterminada del sistema operativo en el que se está ejecutando y esto aporta consistencia visual en entornos donde se da importancia a la accesibilidad */
+}
+
+/*COLORES-------------------------------------------------------------------------------------*/
+:root{
+    --white-font: #f2f2f2;
+    --green-font: rgb(128, 186, 142);
+    --grey: lightgray;
+    --dark-grey: rgb(128, 128, 128);
+    --lightgray: rgb(242, 242, 242);
+    --black: black;
+    --dark-grey-title: rgb(65, 65, 65);
+}
+
+header, .green-bottom, .third-section, .contact h2, footer {
+    color: var(--white-font);
+}
+
+.header-section a{
+    color: var(--green-font);
+}
+
+.header-section, .contact, footer span{
+    color: var(--dark-grey);
+}
+
+footer{
+    color: var(--dark-grey-title);
+}
+
+/*FONDOS*/
+header, .third-section{
+    background-image: url(images/header.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.contact, footer{
+    background-color: var(--black);
+}
+
+/*FLEX---------------------------------------------------------------------------------------*/
+header, .first-section, .posts, .third-section, .contact{
+    display: flex;
+}
+
+header, .first-section, .third-section, .contact{
+    align-items: center;
+    justify-content: center;
+}
+
+.first-section, .galeria article, footer{
+    text-align: center;
+}
+
+header, .first-section, .contact{
+    flex-direction: column;
+}
+
+.posts{
+    flex-direction: row;
+}
+
+/*HEADER-------------------------------------------------------------------------------------*/
+header{
+    background-position: bottom;
+    height: 15em;
+    font-size: xx-large;
+}
+
+/*FIRST SECTION----------------------------------------------------------------------------------*/
+.first-section{
+    height: 45em;
+    background-color: var(--lightgray);
+    padding: 10em;
+}
+
+.header-section{
+    padding: 2em;
+}
+
+.header-section h2, .posts img, .posts figcaption, .posts p{
+    margin-bottom: 1em;
+}
+
+.header-section p{
+    margin-bottom: 5em;
+}
+
+
+.posts div{
+    padding: 5em;
+}
+
+.posts p{
+    margin-bottom: 3em;
+}
+
+.first-section img{
+    width: 50px;
+    height: 50px;
+}
+
+.green-bottom{
+    border: 1px solid var(--green-font);
+    border-radius: 3px;
+    padding: 1em;
+    background-color: var(--green-font);
+}
+
+/*GALERIA---------------------------------------------------------------------------------*/
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
+    padding: 6em;
+}
+
+.galeria article{
+    padding-right: 7em;
+}
+
+.galeria figcaption{
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+
+/*THIRST-SECTION---------------------------------------------------------------------*/
+.third-section{
+    height: 10em;
+    background-position: center;
+    font-style: italic;
+    font-size: x-large;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    padding-left: 20em;
+    padding-right: 20em;
+    text-align-last: center;
+}
+
+/*CONTACT---------------------------------------------------------------------------*/
+.contact{
+    padding: 4em;
+}
+
+.contact h2{
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.contact p{
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.redes i{
+    margin-right: 1em;
+    margin-bottom: 2em;
+}
