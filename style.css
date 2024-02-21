@@ -32,7 +32,7 @@ header, .green__bottom, .main__third__section, .main__contact h2, footer {
   color: rgb(128, 186, 142);
 }
 
-.main__first__section__header, .main__posts, .main__galeria, .main__contact, footer span {
+.main__first__section__header, .main__first__section__posts, .main__galeria, .main__contact, footer span {
   color: rgb(128, 128, 128);
 }
 
@@ -82,7 +82,7 @@ header {
   max-height: 50px;
 }
 
-.main__first__section__header h2, .main__posts img, .main__posts figcaption, .main__posts p {
+.main__first__section__header h2, .main__first__section__posts img, .main__first__section__posts figcaption {
   margin-bottom: 1em;
 }
 
@@ -90,16 +90,16 @@ header {
   margin-bottom: 5em;
 }
 
-.main__posts {
+.main__first__section__posts {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
 }
-.main__posts div {
+.main__first__section__posts div {
   padding: 5em;
 }
-.main__posts p {
+.main__first__section__posts p {
   margin-bottom: 3em;
 }
 

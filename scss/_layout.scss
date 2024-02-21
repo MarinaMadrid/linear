@@ -30,7 +30,7 @@ header, .green__bottom, .main__third__section, .main__contact h2, footer {
     color: map-get($colores, green-font);
 }
 
-.main__first__section__header, .main__posts, .main__galeria, .main__contact, footer span{
+.main__first__section__header, .main__first__section__posts, .main__galeria, .main__contact, footer span{
     color: map-get($colores, dark-grey);
 }
 
@@ -75,7 +75,7 @@ header{
     }
 }
 
-.main__first__section__header h2, .main__posts img, .main__posts figcaption, .main__posts p{
+.main__first__section__header h2, .main__first__section__posts img, .main__first__section__posts figcaption{
     margin-bottom: 1em;
 }
 
@@ -83,7 +83,7 @@ header{
     margin-bottom: 5em;
 }
 
-.main__posts{
+.main__first__section__posts{
     @include flexbox(row);
 
     div{
