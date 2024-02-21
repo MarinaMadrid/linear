@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+ul, ol {
+    list-style: none;
+}
+    
+a {
+    text-decoration: none;
+}
+    
+*:focus {
+    outline: none; /* Desactivar el contorno por defecto en todos los elementos formulario*/
+}
+    
+body { 
+    font-size: 1rem;
+    font-family: system-ui;/* permite que el navegador elija la fuente predeterminada del sistema operativo en el que se está ejecutando y esto aporta consistencia visual en entornos donde se da importancia a la accesibilidad */
+}
+
+/*COLORES-------------------------------------------------------------------------------------*/
+header, .green__bottom, .main__third__section, .main__contact h2, footer {
+    color: map-get($colores, white-font);
+}
+
+.main__first__section__header a{
+    color: map-get($colores, green-font);
+}
+
+.main__first__section__header, .main__posts, .main__galeria, .main__contact, footer span{
+    color: map-get($colores, dark-grey);
+}
+
+footer{
+    color: map-get($colores, dark-grey-title);
+}
+
+/*FONDOS-------------------------------------------------------------------------------------*/
+header, .main__third__section{
+    background-image: $fondo;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.main__contact, footer{
+    background-color: map-get($colores, black-font);
+}
+
+/*FLEX---------------------------------------------------------------------------------------*/
+.main__first__section, .main__galeria article, .main__third__section p, footer{
+    text-align: center;
+}
+
+/*HEADER-------------------------------------------------------------------------------------*/
+header{
+    @include flexbox(column, center, center);
+    background-position: bottom;
+    min-height: 15em;
+    font-size: xx-large;
+}
+
+/*FIRST SECTION----------------------------------------------------------------------------------*/
+.main__first__section{
+    @include flexbox(column, center, center);
+    min-height: 45em;
+    background-color:  map-get($colores, lightgray-font);
+    padding: 5em;
+
+    img{
+        max-width: 50px;
+        max-height: 50px;
+    }
+}
+
+.main__first__section__header h2, .main__posts img, .main__posts figcaption, .main__posts p{
+    margin-bottom: 1em;
+}
+
+.main__first__section__header p{
+    margin-bottom: 5em;
+}
+
+.main__posts{
+    @include flexbox(row);
+
+    div{
+        padding: 5em;
+    }
+
+    p{
+        margin-bottom: 3em;
+    }
+}
+
+.green__bottom{
+    border: 1px solid map-get($colores, green-font);
+    border-radius: 3px;
+    padding: 0.5em;
+    background-color: map-get($colores, green-font);
+}
+
+/*GALERIA---------------------------------------------------------------------------------*/
+.main__galeria{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    grid-gap: 3em;
+    padding: 6em;
+
+    article{
+        padding-right: 7em;
+    }
+
+    figcaption{
+        font-size: 2em;
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+    }
+}
+
+/*THIRST-SECTION---------------------------------------------------------------------*/
+.main__third__section{
+    @include flexbox(row, center, center);
+    min-height: 10em;
+    background-position: center;
+    font-style: italic;
+    font-size: x-large;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    padding-left: 20em;
+    padding-right: 20em;
+    text-align-last: center;
+}
+
+/*CONTACT---------------------------------------------------------------------------*/
+.main__contact{
+    @include flexbox(column, center, center);
+    padding: 4em;
+
+    h2{
+        font-size: 3em;
+        font-weight: 100;
+    }
+
+    p{
+        margin-top: 1em;
+        margin-bottom: 5em;
+    }
+
+    hr{
+        width: 75%;
+        border-color:  map-get($colores, dark-grey);
+    }
+}
+

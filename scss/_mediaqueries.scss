@@ -1,0 +1,29 @@
+/*MEDIA QUERIES---------------------------------------------------------------*/
+/*DESKTOP---------------------------------------------------------------------*/
+@media screen and (max-width: 1300px) {
+    .main__posts {
+      flex-direction: column;
+
+      div{
+            padding: 2em;
+        }
+    }
+
+    .main__galeria {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));  
+    }
+
+    .main__third__section{
+        padding-right: 2em;
+        padding-left: 2em;
+    }
+    
+    footer{
+        height: 10em;
+
+        p{
+            margin-bottom: 2em;
+        }
+    }
+  }
+  
